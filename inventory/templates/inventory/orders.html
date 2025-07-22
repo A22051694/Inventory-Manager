@@ -18,8 +18,17 @@
         <option value="{{ product.id }}">{{ product.name }}</option>
         {% endfor %}
       </select>
-      <input type="number" name="quantity" placeholder="Quantity" class="border p-2 mb-2 w-full" required min="1" />
-      <button type="submit" class="py-2 px-4 bg-green-600 text-white rounded">Place Order</button>
+      <input
+        type="number"
+        name="quantity"
+        placeholder="Quantity"
+        class="border p-2 mb-2 w-full"
+        required
+        min="1"
+      />
+      <button type="submit" class="py-2 px-4 bg-green-600 text-white rounded">
+        Place Order
+      </button>
     </form>
     <ul id="orders-list">
       {% for order in orders %}
@@ -34,27 +43,29 @@
       {% endfor %}
     </ul>
     <script>
-      document.getElementById('add-order-form').addEventListener('submit', async function(e) {
-        e.preventDefault();
-        const form = e.target;
-        const data = {
-          product: form.product.value,
-          quantity: form.quantity.value
-        };
-        const res = await fetch('/inventory/api/orders/', {
-          method: 'POST',
-          headers: {
-            'Content-Type': 'application/json',
-            'X-CSRFToken': '{{ csrf_token }}'
-          },
-          body: JSON.stringify(data)
+      document
+        .getElementById("add-order-form")
+        .addEventListener("submit", async function (e) {
+          e.preventDefault();
+          const form = e.target;
+          const data = {
+            product: form.product.value,
+            quantity: form.quantity.value,
+          };
+          const res = await fetch("/inventory/api/orders/", {
+            method: "POST",
+            headers: {
+              "Content-Type": "application/json",
+              "X-CSRFToken": "{{ csrf_token }}",
+            },
+            body: JSON.stringify(data),
+          });
+          if (res.ok) {
+            location.reload();
+          } else {
+            alert("Error placing order");
+          }
         });
-        if (res.ok) {
-          location.reload();
-        } else {
-          alert('Error placing order');
-        }
-      });
     </script>
   </body>
 </html>
