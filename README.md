@@ -1,6 +1,6 @@
 # Inventory-Manager
 Inventory Manager with REST API — manage product stock and track customer orders using Django backend and HTML/Tailwind frontend with secure login.
-Here’s a clean **field breakdown** (no code) for the `inventory` app, focusing on **two models**: `Product` and `Order`.
+
 
 ---
 
@@ -38,4 +38,4 @@ Here’s a clean **field breakdown** (no code) for the `inventory` app, focusing
 * Use `request.user.is_staff` to allow admin-only edits/cancellations.
 * Add soft-delete (`is_canceled`) or a delivery flag (`is_delivered`) if needed.
 
-Let me know if you want help mapping these to serializers, forms, or DRF views next.
+
