@@ -1,6 +1,7 @@
-# User profile for roles
+from django.db import models
 from django.contrib.auth.models import User
 
+# User profile for roles
 class Profile(models.Model):
     ROLE_CHOICES = [
         ('admin', 'Admin'),
@@ -14,11 +15,3 @@ class Profile(models.Model):
 
     def __str__(self):
         return f"{self.user.username} ({self.role})"
-from django.db import models
-from django.contrib.auth.models import User
-
-class Profile(models.Model):
-    user = models.OneToOneField(User, on_delete=models.CASCADE)
-    bio = models.TextField(blank=True)
-    def __str__(self):
-        return self.user.username
