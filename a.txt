@@ -1,0 +1,3 @@
+source .venv/Scripts/activate
+echo "hy" > a.txt # for creating and adding content
+echo "hy" >> a.txt # for appending content
