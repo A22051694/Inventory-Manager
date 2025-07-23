@@ -33,9 +33,9 @@ Inventory Manager with REST API — manage product stock and track customer orde
 
 ---
 
-## ✅ Optional (Admin/User Role-Based Logic)
+## ✅ Optional Future Plana (Admin/User Role-Based Logic)
 
-* Use `request.user.is_staff` to allow admin-only edits/cancellations.
-* Add soft-delete (`is_canceled`) or a delivery flag (`is_delivered`) if needed.
+* Plan Use `request.user.is_staff` to allow admin-only edits/cancellations.
+* Plan to Add soft-delete (`is_canceled`) or a delivery flag (`is_delivered`) if needed.
 
 
