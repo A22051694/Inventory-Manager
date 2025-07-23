@@ -1,0 +1,88 @@
+# Project Requirements Document (PRD)
+
+## Title
+Inventory Management System
+
+## Overview
+This application assists organizations in tracking, managing, and optimizing inventory. Users can view stock levels, add/remove items, and categorize inventory by type (e.g., electronics, office supplies, consumables).
+
+## Goals & Objectives
+- Provide real-time tracking of inventory items.
+- Allow filtering and sorting of inventory by category, location, and status.
+- Enable users to update stock quantities and add new items.
+- Offer a simple, intuitive UI for daily use.
+
+## Target User
+- Operations managers
+- Warehouse staff
+- Small business owners
+- Anyone responsible for managing physical inventory
+
+## Features
+
+| Feature            | Description                                                      | Priority |
+|--------------------|------------------------------------------------------------------|----------|
+| View Inventory     | Display a list of inventory items with quantity & status         | High     |
+| Filter by Type     | Filter inventory (e.g., Electronics, Office, Consumables)        | Medium   |
+| Update Quantity    | Add/remove stock; adjust quantities                              | High     |
+| Item Details       | Show item description, supplier, location                        | High     |
+| Add New Item       | Add new inventory items to the system                            | High     |
+| Export Inventory   | Optionally export inventory list to CSV/PDF                      | Low      |
+
+## Functional Requirements
+
+**View Inventory**
+- Data: Item Name, Description, Quantity, Type, Location, Status
+- Use SQLite for data storage
+
+**Stock Update System**
+- Users can increase/decrease quantities
+- Add/remove inventory items
+
+**Filter System**
+- Drop-down or button-based filters
+- Optional search box
+
+## UI/UX Requirements
+- Clean, mobile-first design
+- 3 screens:
+    - Home (Inventory list)
+    - Item Details
+    - Stock Update
+
+## Tech Stack
+- **Frontend:** HTML, Tailwind CSS
+- **Backend:** Django, SQLite (or Postgres/MongoDB as alternative)
+- **Export:** CSV/PDF download
+
+## Timeline
+
+| Task                        | Deadline |
+|-----------------------------|----------|
+| Requirement Finalization     | Day 1    |
+| UI Wireframes                | Day 2    |
+| Build Inventory List View    | Day 3    |
+| Add Filter & Stock Update    | Day 4    |
+| Testing                     | Day 5    |
+| Final Touches & Report      | Day 6    |
+
+## Success Criteria
+- App loads and displays at least 10 inventory items
+- User can update quantity of at least one item
+- Mobile responsive layout
+- No major bugs during testing
+
+## Deliverables
+- Working app (deployed - Vercel/PythonAnywhere)
+- Code (GitHub)
+- Short demo video (2-3 minutes)
+- Final Report (PDF with screenshots and features)
+
+## Result
+Deployed App: Inventory Manager Live Demo (replace with your actual link if different)
+
+Source Code: GitHub Repository - Inventory Manager
+
+Demo Video: YouTube Demo (2–3 min) (or Google Drive link if hosted there)
+
+Final Report (PDF): Included in the repository under /docs/Final_Report.pdf (or provide separate link if applicable)
